@@ -34,7 +34,7 @@ execute 'copy-files' do
 end
 
 # clearance
-#execute 'delete-sources' do
-#  command "rm '/tmp/#{node['install_odoo']['webkit_package']}'"
-#  only_if { File.exist?("/tmp/#{node['install_odoo']['webkit_package']}") }
-#end
+execute 'delete-sources' do
+  command "rm '/tmp/#{node['install_odoo']['webkit_package']}'"
+  only_if { File.exist?("/tmp/#{node['install_odoo']['webkit_package']}") }
+end
