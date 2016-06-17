@@ -1,4 +1,4 @@
-me 'odoo_v9_install'
+name 'odoo_v9_install'
 maintainer 'Michael Doederlein'
 maintainer_email 'michael.doederlein@cloud-logic.net'
 license 'all_rights'
