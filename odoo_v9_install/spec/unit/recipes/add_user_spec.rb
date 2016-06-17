@@ -1,12 +1,12 @@
 #
-# Cookbook Name:: opsworks_test1
+# Cookbook Name:: odoo_v9_install
 # Spec:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'odoo_v9_install::install_packages' do
+describe 'odoo_v9_install::add_user' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
