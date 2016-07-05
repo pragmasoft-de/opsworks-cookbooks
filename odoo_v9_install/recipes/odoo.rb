@@ -7,7 +7,7 @@
 # change owner of $HOME for user odoo
 directory '/opt/odoo' do
   owner node['install_odoo']['user']
-  owner group['install_odoo']['group']
+  group node['install_odoo']['group']
 end
 
 # sync git repository
