@@ -7,8 +7,8 @@
 # change owner of $HOME for user odoo
 directory '/opt/odoo' do
   owner node['install_odoo']['user']
-  owner gourp['install_odoo']['group']
-    end
+  owner group['install_odoo']['group']
+end
 
 # sync git repository
 git "#{node['install_odoo']['homedir']}/odoo-server" do
