@@ -1,0 +1,10 @@
+[options]
+; This is the password that allows database operations:
+db_host = False
+db_port = False
+db_password = False
+db_user = <%= node['install_odoo']['user'] %>
+admin_passwd = <%= node['install_odoo']['admin_passwd'] %>
+logfile = <%= node['install_odoo']['logfile'] %>
+addons_path= /opt/odoo/odoo-server/addons,<%= node['install_odoo']['custom_addons'] %>
+xmlrpc_interface = 192.168.34.34
