@@ -4,6 +4,13 @@
 #
 # Copyright (c) 2016 Michael Doederlein, All Rights Reserved.
 #
+# change owner of $HOME for user odoo
+directory '/opt/odoo' do
+  owner node['install_odoo']['user']
+  owner gourp['install_odoo']['group']
+    end
+
+# sync git repository
 git "#{node['install_odoo']['homedir']}/odoo-server" do
   user node['install_odoo']['user']
   group node['install_odoo']['group']
