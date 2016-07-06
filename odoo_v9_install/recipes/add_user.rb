@@ -2,6 +2,7 @@
 # Recipe:: add_user
 #
 # Copyright (c) 2016 Michael Doederlein, All Rights Reserved.
+Chef::Log.info("********** running odoo_v9_install::add_user.rb **********")
 
 # add group
 group 'add odoo group' do

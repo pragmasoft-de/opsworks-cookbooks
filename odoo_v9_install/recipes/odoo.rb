@@ -3,7 +3,9 @@
 # Recipe:: odoo
 #
 # Copyright (c) 2016 Michael Doederlein, All Rights Reserved.
-#
+
+Chef::Log.info("********** running odoo_v9_install::odoo.rb **********")
+
 # change owner of $HOME for user odoo
 directory '/opt/odoo' do
   owner node['install_odoo']['user']

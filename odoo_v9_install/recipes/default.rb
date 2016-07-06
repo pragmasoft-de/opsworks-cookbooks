@@ -3,4 +3,4 @@
 # Recipe:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
-Chef::Log.info("********** Preparing for odoo **********")
+Chef::Log.info("********** running odoo_v9_install::default.rb **********")

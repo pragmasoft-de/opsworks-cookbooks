@@ -2,6 +2,7 @@
 # Recipe:: install_packages
 #
 # Copyright (c) 2016 Michael Doederlein, All Rights Reserved.
+Chef::Log.info("********** running odoo_v9_install::install_packages.rb **********")
 
 # install apt packages
 package ['wget', 'git', 'python-pip', 'python-imaging', 'python-setuptools', 'python-dev', 'libxslt-dev', 'libxml2-dev', 'libldap2-dev', 'libsasl2-dev', 'node-less', 'postgresql-server-dev-all', 'nodejs', 'npm']

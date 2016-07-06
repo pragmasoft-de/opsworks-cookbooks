@@ -3,6 +3,7 @@
 # Recipe:: postgresql
 #
 # Copyright (c) 2016 Michael Doederlein, All Rights Reserved.
+Chef::Log.info("********** running odoo_v9_install::postgresql.rb **********")
 
 # Install postgresql client and server
 include_recipe 'postgresql::server'
