@@ -47,12 +47,16 @@ directory '/var/log/odoo' do
   group 'root'
 end
 
-# create openerp-server.conf
+# create odoo-server.conf from template file
 template '/etc/odoo-server.conf' do
   source 'odoo-server.conf.erb'
   owner node['install_odoo']['user']
   group 'root'
   mode '0640'
+end
+# configure ip address in odoo-server.conf
+execute "ip-conf" do
+  command 'sed -i "s/local-ipv4/$(curl http://169.254.169.254/latest/meta-data/local-ipv4)/g" /etc/odoo-server.conf'
 end
 
 # create start-/stop script
