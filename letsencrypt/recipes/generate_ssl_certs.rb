@@ -23,8 +23,8 @@ letsencrypt_selfsigned "#{site}" do
     crt     "/etc/apache2/ssl/#{site}.crt"
     key     "/etc/apache2/ssl/#{site}.key"
     chain    "/etc/apache2/ssl/#{site}.pem"
-    owner   "apache"
-    group   "apache"
+    owner   "www-data"
+    group   "www-data"
     notifies :restart, "service[apache2]", :immediate
     not_if do
         # Only generate a self-signed cert if needed
