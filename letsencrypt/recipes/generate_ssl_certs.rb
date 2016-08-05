@@ -11,7 +11,7 @@ node.set['letsencrypt']['contact'] = [ 'mailto:me@example.com' ]
 # Real certificates please...
 node.set['letsencrypt']['endpoint'] = 'https://acme-v01.api.letsencrypt.org' 
 
-site="ec2-52-59-17-184.eu-central-1.compute.amazonaws.com"
+site="cloud-logic.de"
 sans=Array[ "www.#{site}" ]
 
 # Set up your server here...
