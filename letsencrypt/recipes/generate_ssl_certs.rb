@@ -34,9 +34,9 @@ end
 
 # Get and auto-renew the certificate from letsencrypt
 letsencrypt_certificate "#{site}" do
-    crt      "/etc/apache/ssl/#{site}.crt"
-    key      "/etc/apache/ssl/#{site}.key"
-    chain    "/etc/apache/ssl/#{site}.pem"
+    crt      "/etc/apache2/ssl/#{site}.crt"
+    key      "/etc/apache2/ssl/#{site}.key"
+    chain    "/etc/apache2/ssl/#{site}.pem"
     method   "http"
     wwwroot  "/var/www/#{site}/htdocs/"
     notifies :restart, "service[apache2]"
