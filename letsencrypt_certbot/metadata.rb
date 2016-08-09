@@ -1,0 +1,7 @@
+name 'letsencrypt_certbot'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures letsencrypt_certbot'
+long_description 'Installs/Configures letsencrypt_certbot'
+version '0.1.0'
