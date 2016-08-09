@@ -6,8 +6,8 @@ require 'net/http'
 include_recipe 'route53'
 
 route53_record "create a record" do
-# name  node[:opsworks][:instance][:hostname] + '.cloud-logic.de'
-  name  'foobar' + '.cloud-logic.de'
+  name  node[:hostname] + '.cloud-logic.de'
+#  name  'foobar' + '.cloud-logic.de'
   value Net::HTTP.get(URI.parse('http://169.254.169.254/latest/meta-data/public-ipv4'))
   type  "A"
   ttl   60
