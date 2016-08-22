@@ -16,7 +16,7 @@
     "ubuntu": ">= 0.0.0"
   },
   "dependencies": {
-    "apt": "~> 2.2",
+    "apt": ">= 2.2",
     "bluepill": "~> 2.3",
     "build-essential": "~> 2.0",
     "ohai": "~> 2.0",
