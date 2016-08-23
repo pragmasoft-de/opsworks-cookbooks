@@ -19,11 +19,7 @@ end
 
 # configure FQDN in odoo.conf
 execute "ip-conf" do
-  command 'cat /etc/hostname >> /tmp/foo.txt && sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt && sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf'
-#execute "ip-conf" do
-#  command 'cat /etc/hostname >> /tmp/foo.txt'
-#  command 'sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt'
-#  command 'sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf'
+  command 'cat /etc/hostname >> /tmp/foo.txt && sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt && sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf && rm /tmp/foo.txt'
 end
 
 # configure public ip address in odoo.conf
