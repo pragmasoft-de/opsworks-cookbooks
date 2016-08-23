@@ -8,7 +8,7 @@
 
 # configure FQDN in odoo.conf
 execute "ServerName" do
-  command 'cat /tmp/foo.txt | sed "s/^/ServerName /" >> /etc/apache2/apache2.conf &&  && rm /tmp/foo.txt'
+  command 'cat /tmp/foo.txt | sed "s/^/ServerName /" >> /etc/apache2/apache2.conf && rm /tmp/foo.txt'
 end
 
 # reload apache
