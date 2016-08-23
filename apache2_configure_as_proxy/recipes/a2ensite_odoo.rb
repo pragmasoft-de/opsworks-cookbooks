@@ -19,8 +19,8 @@ end
 
 # configure FQDN in odoo.conf
 execute "ip-conf" do
-  name  node[:hostname] + '.cloud-logic.de'
-  command 'sed -i "s/FQDN/$('name')/g" /etc/odoo-server.conf'
+#  name  node[:hostname] + '.cloud-logic.de'
+  command 'sed -i "s/FQDN/#{node['hostname']}/g" /etc/odoo-server.conf'
 end
 
 # configure public ip address in odoo.conf
