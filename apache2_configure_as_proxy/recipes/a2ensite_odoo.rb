@@ -24,7 +24,7 @@ execute "ip-conf" do
 #  command 'cat /etc/hostname >> /tmp/foo.txt'
 #  command 'sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt'
 #  command 'sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf'
-#end
+end
 
 # configure public ip address in odoo.conf
 execute "public-ipv4-conf" do
