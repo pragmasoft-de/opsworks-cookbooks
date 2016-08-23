@@ -3,7 +3,8 @@ default['certbot']['auto_setup'] = true
 default['certbot']['sandbox']['enabled'] = false
 default['certbot']['sandbox']['user'] = 'certbot'
 default['certbot']['sandbox']['group'] = 'certbot'
-default['certbot']['sandbox']['webroot_path'] = '/var/www/certbot'
+# default['certbot']['sandbox']['webroot_path'] = '/var/www/certbot'
+default['certbot']['sandbox']['webroot_path'] = '/var/www/html'
 
 default['certbot']['default_cron']['predefined_value'] = '@daily'
 default['certbot']['cron_name'] = 'certbot-renew'

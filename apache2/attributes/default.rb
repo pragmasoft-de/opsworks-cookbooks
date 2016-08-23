@@ -106,6 +106,7 @@ when 'redhat', 'centos', 'scientific', 'fedora', 'amazon', 'oracle'
   default['apache']['binary']      = '/usr/sbin/httpd'
   default['apache']['conf_dir']    = '/etc/httpd/conf'
   default['apache']['docroot_dir'] = '/var/www/html'
+#  default['apache']['docroot_dir'] = '/var/www/certbot'
   default['apache']['cgibin_dir']  = '/var/www/cgi-bin'
   default['apache']['icondir'] =
     if node['apache']['version'] == '2.4'
