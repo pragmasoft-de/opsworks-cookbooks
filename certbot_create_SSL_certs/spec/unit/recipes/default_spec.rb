@@ -1,12 +1,12 @@
 #
-# Cookbook Name:: letsencrypt_certbot
+# Cookbook Name:: certbot_create_SSL_certs
 # Spec:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'letsencrypt_certbot::default' do
+describe 'certbot_create_SSL_certs::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new

@@ -17,5 +17,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[letsencrypt_certbot::default]
+      - recipe[certbot_create_SSL_certs::default]
     attributes:

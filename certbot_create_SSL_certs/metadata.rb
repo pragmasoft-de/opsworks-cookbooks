@@ -1,0 +1,7 @@
+name 'certbot_create_SSL_certs'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures certbot_create_SSL_certs'
+long_description 'Installs/Configures certbot_create_SSL_certs'
+version '0.1.0'
