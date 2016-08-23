@@ -18,11 +18,21 @@ template '/etc/apache2/sites-available/odoo.conf' do
 end
 
 # configure FQDN in odoo.conf
-execute "ip-conf" do
+execute "FQDN" do
   command 'cat /etc/hostname >> /tmp/foo.txt && sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt && sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf && rm /tmp/foo.txt'
 end
 
 # configure public ip address in odoo.conf
 execute "public-ipv4-conf" do
   command 'sed -i "s/public-ipv4/$(curl http://169.254.169.254/latest/meta-data/public-ipv4)/g" /etc/apache2/sites-available/odoo.conf'
+end
+
+# enable site odoo.conf
+execute "a2ensite" do
+  command 'a2ensite odoo'
+end
+
+# reload apache
+service 'apache2' do
+  action [:reload]
 end
