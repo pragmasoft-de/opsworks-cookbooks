@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/%$1 [R,L]
+
+NameVirtualHost *:80
+<VirtualHost *:80>
+ServerName FQDN
+Redirect permanent / https://FQDN/
+</VirtualHost>
+
+<VirtualHost _default_:443>
+ServerName FQDN
+SSLEngine on
+SSLProxyEngine on
+SSLCertificateFile /etc/letsencrypt/live/FQDN/cert.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/FQDN/privkey.pem
+SSLProxyEngine on
+ProxyPreserveHost on
+ProxyPass / http://127.0.0.1:8069/
+ProxyPassReverse / http://127.0.0.1:8069/
+</VirtualHost>
+
+Redirect / https://public-ipv4:443/

@@ -106,7 +106,6 @@ when 'redhat', 'centos', 'scientific', 'fedora', 'amazon', 'oracle'
   default['apache']['binary']      = '/usr/sbin/httpd'
   default['apache']['conf_dir']    = '/etc/httpd/conf'
   default['apache']['docroot_dir'] = '/var/www/html'
-#  default['apache']['docroot_dir'] = '/var/www/certbot'
   default['apache']['cgibin_dir']  = '/var/www/cgi-bin'
   default['apache']['icondir'] =
     if node['apache']['version'] == '2.4'
@@ -345,6 +344,7 @@ default['apache']['proxy']['allow_from'] = 'none'
 default['apache']['default_modules'] = %w(
   status alias auth_basic authn_core authn_file authz_core authz_groupfile
   authz_host authz_user autoindex deflate dir env mime negotiation setenvif
+  proxy_http headers rewrite ssl
 )
 
 %w(log_config logio).each do |log_mod|
