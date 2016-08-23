@@ -19,7 +19,7 @@ end
 
 # configure FQDN in odoo.conf
 execute "FQDN" do
-  command 'cat /etc/hostname >> /tmp/foo.txt && sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt && sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf && rm /tmp/foo.txt'
+  command 'cat /etc/hostname >> /tmp/foo.txt && sed -i "s/$/.cloud-logic.de/" /tmp/foo.txt && sed -i "s/FQDN/$(cat /tmp/foo.txt)/g" /etc/apache2/sites-available/odoo.conf'
 end
 
 # configure public ip address in odoo.conf
@@ -30,6 +30,11 @@ end
 # enable site odoo.conf
 execute "a2ensite" do
   command 'a2ensite odoo'
+end
+
+# disable default-site
+execute "a2dissite" do
+  command "a2dissite 000-default"
 end
 
 # reload apache

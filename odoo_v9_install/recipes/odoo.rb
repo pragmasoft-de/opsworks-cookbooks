@@ -55,9 +55,9 @@ template '/etc/odoo-server.conf' do
   mode '0640'
 end
 # configure ip address in odoo-server.conf
-execute "ip-conf" do
-  command 'sed -i "s/local-ipv4/$(curl http://169.254.169.254/latest/meta-data/local-ipv4)/g" /etc/odoo-server.conf'
-end
+#execute "ip-conf" do
+#  command 'sed -i "s/local-ipv4/$(curl http://169.254.169.254/latest/meta-data/local-ipv4)/g" /etc/odoo-server.conf'
+#end
 
 # create start-/stop script
 template '/etc/init.d/odoo-server' do

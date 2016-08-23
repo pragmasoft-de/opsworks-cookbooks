@@ -7,4 +7,5 @@ db_user = <%= node['install_odoo']['user'] %>
 admin_passwd = <%= node['install_odoo']['admin_passwd'] %>
 logfile = <%= node['install_odoo']['logfile'] %>
 addons_path= /opt/odoo/odoo-server/addons,<%= node['install_odoo']['custom_addons'] %>
-xmlrpc_interface = local-ipv4
+# xmlrpc_interface = local-ipv4
+xmlrpc_interface = 127.0.0.1
