@@ -54,7 +54,7 @@ template '/etc/odoo-server.conf' do
   group 'root'
   mode '0640'
 end
-# configure ip address in odoo-server.conf
+# configure ip address in odoo-server.conf for xmlrpc_interface
 #execute "ip-conf" do
 #  command 'sed -i "s/local-ipv4/$(curl http://169.254.169.254/latest/meta-data/local-ipv4)/g" /etc/odoo-server.conf'
 #end
