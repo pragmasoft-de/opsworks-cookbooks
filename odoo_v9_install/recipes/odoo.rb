@@ -65,8 +65,13 @@ template '/etc/init.d/odoo-server' do
   mode '0755'
 end
 
-# bring service alive
+# enable odoo service
 service 'odoo-server' do
   supports :status => true, :start => true, :stop => true, :restart => true
-  action [:enable, :start]
+  action :enable
+end
+
+# start odoo service
+service 'odoo-server' do
+  action :start
 end
