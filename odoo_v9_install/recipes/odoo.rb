@@ -71,7 +71,8 @@ service 'odoo-server' do
   action :enable
 end
 
+Chef::Log.info("********** starting odoo Server XXXXX **********")
 # start odoo service
 service 'odoo-server' do
-  action :start
+  action :restart
 end
