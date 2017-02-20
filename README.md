@@ -1,1 +1,1 @@
-xxx opsworks-cookbooks xxx
+opsworks-cookbooks
